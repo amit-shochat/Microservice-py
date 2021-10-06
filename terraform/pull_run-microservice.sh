@@ -16,8 +16,8 @@ function docker_utiles() {
 }
 
 function pull_run() {
-  docker pull amitshochat66/app:1.0.0
-  docker run --name app-alpine -p 80:5000 amitshochat66/app:1.0.0
+  docker pull amitshochat66/app:latest
+  docker run --name app-alpine -p 80:5000 amitshochat66/app:latest
 
 }
 
