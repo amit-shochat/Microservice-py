@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "example-org-11d9e0"
+
+    workspaces {
+      name = "micro-app"
+    }
+  }
+}
+
 # --------------Provider -------------------------------
 
 provider "aws" {
