@@ -43,9 +43,10 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          context: ./
+          file: ./app/Dockerfile
           push: true
-          working-directory: ${{env.working-directory}}
-          tags: amitshochat66/app:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/app:latest
         
   Terraform-Plan:
    
